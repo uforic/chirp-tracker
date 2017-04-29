@@ -10,11 +10,11 @@ services:
      - "4180:4180"
     entrypoint:
     - oauth2_proxy
-    - --cookie-secret=l46rx5eRy+AZUsMUs8aGVBOPcjXfETOpn1Ityb76MU=
+    - --cookie-secret=${COOKIE_SECRET}
     - --cookie-secure=false
     - --upstream=http://web:8000
-    - --client-id=595670537468-62ghhlk39it20bt19io0aro4ftba78tu.apps.googleusercontent.com
-    - --client-secret=cBUW8IsIQl8G47Dq1qieDzkA
+    - --client-id=${CLIENT_ID}
+    - --client-secret=${CLIENT_SECRET}
     - --http-address=http://0.0.0.0:4180
     - --email-domain=*
   influx:
