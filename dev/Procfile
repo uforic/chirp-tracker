@@ -1,0 +1,2 @@
+web1: go run cmd/viewer.go
+web2: cd ui/ && yarn install && node node_modules/webpack/bin/webpack.js --progress --colors -p --watch
