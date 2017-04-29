@@ -10,8 +10,6 @@ services:
       - "8000:8000" 
   generator:
     image: "data-generator"
-    volumes:
-     - ./bin/:/bin
   oauth2-proxy:
     image: "wingedkiwi/oauth2-proxy"
     ports:

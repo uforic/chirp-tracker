@@ -9,4 +9,6 @@ RUN apt-get update && apt-get install \
 COPY bin/viewer /binaries/viewer
 COPY bin/goreman /binaries/goreman
 COPY . /chirp-viewer
-ENTRYPOINT /binaries/goreman -f dev/Procfile start
+WORKDIR /chirp-viewer
+# ENTRYPOINT /bin/bash
+ENTRYPOINT /binaries/goreman -f dev/Procfile_prod start

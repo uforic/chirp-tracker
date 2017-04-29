@@ -1,13 +1,9 @@
 version: '2.1'
 services:
   web: 
-    image: "web-server-prod"
-    ports:
-      - "8000:8000" 
+    image: "uforic/web-server-prod"
   generator:
-    image: "data-generator"
-    volumes:
-     - ./bin/:/bin
+    image: "uforic/data-generator"
   oauth2-proxy:
     image: "wingedkiwi/oauth2-proxy"
     ports:
