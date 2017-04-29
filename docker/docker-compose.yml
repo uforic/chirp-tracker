@@ -1,11 +1,7 @@
 version: '2.1'
 services:
   web: 
-    image: "web-server"
-    volumes:
-      - ./bin/:/binaries
-      - ${GOPATH}/src/:/go/src
-      - ./:/chirp-viewer
+    image: "web-server-prod"
     ports:
       - "8000:8000" 
   generator:

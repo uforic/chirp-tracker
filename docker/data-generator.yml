@@ -1,2 +1,3 @@
 FROM alpine:latest
+COPY bin/data-generator /bin/data-generator
 ENTRYPOINT ["/bin/data-generator"]
